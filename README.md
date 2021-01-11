@@ -35,3 +35,7 @@ ssh pi@raspberrypi.local
 ```
 ## Running Raspberry Pi with VNC
 ###### Desktop-like control
+Find out the ip address of the raspberry pi
+```
+ifconfig
+```
