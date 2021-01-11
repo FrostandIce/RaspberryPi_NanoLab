@@ -25,5 +25,13 @@ Without further ado... let's begin!
 With a standard Raspberry Pi setup, you would need a bunch of wires. A HDMI cable and a monitor, a micro-usb cable to usb, and a keyboard and mouse. However, there is a way to use another computer or laptop and use the Raspberry pi from there! SSH (Secure shell) and VNC (Virtual Network Control) and the tools we need to achieve this. SSH will allow us to connect to the raspberry pi terminal, but VNC will allow us to see and control the Raspberry Pi like another desktop.
 ## Running Raspberry Pi with SSH
 ###### Terminal-like control
+Ping into the raspberry pi in your wifi
+```
+ping -c 3 raspberrypi.local
+```
+SSH into it
+```
+ssh pi@raspberrypi.local
+```
 ## Running Raspberry Pi with VNC
 ###### Desktop-like control
