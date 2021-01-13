@@ -33,7 +33,30 @@ However, if you're making a project where having a monitor, keyboard, and mouse 
 With a standard Raspberry Pi setup, you would need a bunch of wires. A HDMI cable and a monitor, a micro-usb cable to usb, and a keyboard and mouse. However, there is a way to use another computer or laptop and use the Raspberry pi from there! SSH (Secure shell) and VNC (Virtual Network Control) and the tools we need to achieve this. SSH will allow us to connect to the raspberry pi terminal, but VNC will allow us to see and control the Raspberry Pi like another desktop.
 ## Running Raspberry Pi with SSH
 ###### Terminal-like control
-Before we can begin, there are a few things that might be blocked on your computer and must be allowed to establish a SSH connection. MacOS has the firewall to be turned on be default and computer sharing off. Head over to your settings go to privacy and turn these off to establish a SSH connection.
+Before we can begin, there are a few things that might be blocked on your computer and must be allowed to establish a SSH connection. MacOS needs the firewall to be turned off for computer sharing to occur. Head over to your settings go to privacy and turn these off to establish a SSH connection.
+Next, you have to connect the raspberry pi to your wifi and also enable SSH which is off by default. 
+This requires you to add two files to the micro SD card that the Pi will run on.
+The first file will configure the wifi and must be called **wpa_supplicant.conf**, inside add the following code.
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+     
+network={
+    ssid="YOURSSID"
+    psk="YOURPASSWORD"
+}
+```
+There are 3 variables you might need to change. **country=US** might need to be changed to a different country if you aren't from the US.
+
+**ssid = "YOURSSID"** will be changed to the SSID you are trying to connect to.
+
+**psk = "YOURPASSWORD"** will be changed to the SSID password.
+
+With this, you have configure for the wifi! Next you must enable SSH.
+
+All you need to do is add a empty file with the name **SSH** into the micro SD card and everything ready to go!
+
 Ping into the raspberry pi in your wifi
 ```
 ping -c 3 raspberrypi.local
@@ -48,3 +71,8 @@ Find out the ip address of the raspberry pi
 ```
 ifconfig
 ```
+## Sources
+###### Helpful places to go!
+- [Adafruit learn](https://learn.adafruit.com/)
+- [Raspberry Pi learn] (https://www.raspberrypi.org/learn/)
+- [Raspberry Pi software] (https://www.raspberrypi.org/software/)
