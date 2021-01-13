@@ -47,20 +47,26 @@ network={
     psk="YOURPASSWORD"
 }
 ```
-There are 3 variables you might need to change. **country=US** might need to be changed to a different country if you aren't from the US.
+There are 3 variables you might need to change.\
+**country=US** might need to be changed to a different country if you aren't from the US. Find your country code [here](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).\
+**ssid = "YOURSSID"** will be changed to the SSID you are trying to connect to.\
+**psk = "YOURPASSWORD"** will be changed to the SSID password.\
+With this, you have configure for the wifi! Next you must enable SSH.\
+All you need to do is add a empty file with the name **SSH** into the micro SD card.\
+This will enable SSH for the Pi, but it is not neccessary if your Pi is older than 2014 because it might be enabled by default.\
+With these files in the SD card, plug in the Micro SD card and the 5V power supply into the Raspberry Pi and turn it on!\
 
-**ssid = "YOURSSID"** will be changed to the SSID you are trying to connect to.
-
-**psk = "YOURPASSWORD"** will be changed to the SSID password.
-
-With this, you have configure for the wifi! Next you must enable SSH.
-
-All you need to do is add a empty file with the name **SSH** into the micro SD card and everything ready to go!
-
-Ping into the raspberry pi in your wifi
+On the Raspberry Pi Zero W, a blinking led should start lighting up. That means you are getting power in the Raspberry Pi.\
+With your desktop/laptop **On the __same__ wifi network** as the Raspberry Pi, trying pinging the Pi with your terminal with this command.
 ```
 ping -c 3 raspberrypi.local
 ```
+This pings it 3 times. If all is well, it should give you a response time.\
+If you don't get this message, please check out the list below. It's a list of possible problems and solutions that helped me!\
+- **wpa_supplicant.conf** needs to be strictly formatted. One example is when people add a space between the ssid and the "YOURSSID". It should be ssid="YOURSSID". ~~ssid= "YOURSSID"~~ will **not** work! Also take the time to make sure the **wpa_supplicant.conf** has the correct country_code, SSID, and password.
+- Also make sure both devices are connected to the same wifi. Whatever wifi you put in the **wpa_supplicant.conf** should be the same you are connected to.
+- If using a VPN, turn it off! VPN disguises your IP address when you use the internet, making its location invisible to everyone. This is great for privacy, but terrible if you are actually trying to connect a Raspberry Pi to a personal computer.
+- If none of these work, Turn it off and then on again. Wait another minute and redo the pinging process!
 SSH into it
 ```
 ssh pi@raspberrypi.local
