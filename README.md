@@ -28,11 +28,12 @@ I recommend *Raspberry Pi OS with desktop and recommended software*, this allows
 
 After flashing the OS to micro SD card, everything ready to go! Plug in the power supply and a monitor with the micro SD card on the pi and it should flicker to life.
 However, if you're making a project where having a monitor, keyboard, and mouse becomes a issue... consider running it headlessly!
-## Running Raspberry Pi Headless Guide :computer:
+## Running Raspberry Pi Headless Guide using MacOS :computer:
 ###### Using SSH and VNC 
 With a standard Raspberry Pi setup, you would need a bunch of wires. A HDMI cable and a monitor, a micro-usb cable to usb, and a keyboard and mouse. However, there is a way to use another computer or laptop and use the Raspberry pi from there! SSH (Secure shell) and VNC (Virtual Network Control) and the tools we need to achieve this. SSH will allow us to connect to the raspberry pi terminal, but VNC will allow us to see and control the Raspberry Pi like another desktop.
 ## Running Raspberry Pi with SSH
 ###### Terminal-like control
+Before we can begin, there are a few things that might be blocked on your computer and must be allowed to establish a SSH connection. MacOS has the firewall to be turned on be default and computer sharing off. Head over to your settings go to privacy and turn these off to establish a SSH connection.
 Ping into the raspberry pi in your wifi
 ```
 ping -c 3 raspberrypi.local
