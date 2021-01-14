@@ -57,7 +57,8 @@ This will enable SSH for the Pi, but it is not neccessary if your Pi is older th
 With these files in the SD card, plug in the Micro SD card and the 5V power supply into the Raspberry Pi and turn it on!\
 
 On the Raspberry Pi Zero W, a blinking led should start lighting up. That means you are getting power in the Raspberry Pi.\
-With your desktop/laptop **On the __same__ wifi network** as the Raspberry Pi, trying pinging the Pi with your terminal with this command.
+With your desktop/laptop **On the __same__ wifi network** as the Raspberry Pi, try to ping into the Pi with your terminal with this command.
+###### Ping command
 ```
 ping -c 3 raspberrypi.local
 ```
@@ -67,10 +68,13 @@ If you don't get this message, please check out the list below. It's a list of p
 - Also make sure both devices are connected to the same wifi. Whatever wifi you put in the **wpa_supplicant.conf** should be the same you are connected to.
 - If using a VPN, turn it off! VPN disguises your IP address when you use the internet, making its location invisible to everyone. This is great for privacy, but terrible if you are actually trying to connect a Raspberry Pi to a personal computer.
 - If none of these work, Turn it off and then on again. Wait another minute and redo the pinging process!
-SSH into it
+
+If you got a response time, continue by SSH into the raspberry Pi with the following code!
+###### SSH command
 ```
 ssh pi@raspberrypi.local
 ```
+With this, you have remotely connected to your raspberry pi! Any command you type out now will be ran into the Pi's terminal. However, if you want the same experience you would get with a monitor and keyboard setup, then learn how to VNC in the next passage!
 ## Running Raspberry Pi with VNC
 ###### Desktop-like control
 Find out the ip address of the raspberry pi
