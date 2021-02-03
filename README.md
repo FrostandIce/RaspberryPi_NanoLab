@@ -110,9 +110,10 @@ You can mess around with the applications already installed, like the Minecraft 
 Next, we will be programming how to take pictures then tweeting them!
 ## Using the Raspberry Pi Camera :camera:
 ## Tweeting with the Raspberry Pi!
-cd Tweet/
+cd Desktop/
 ls (list files)
 nano (name of file) to call
+when using newSendTweet.py, put string inside " "
 To Twitter! [Here](https://twitter.com/CCHSNanolabs)
 ## Conclusion
 ## Sources
