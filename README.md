@@ -1,3 +1,5 @@
+# Afternote
+My senior year of highschool was a wild ride, and this project was one of the many highlights that I will remember. This was the year ravaged by corona, the winter storm in Texas, and many hurricanes. Many times, this project was put in the backburner as delays piled on. I'm proud of what our team accomplished this year and we were able to become one of the few NASA finalists of 2021 for NASA HUNCH.
 # RaspberryPi NanoLab
 ###### A step by step guide on how to set up a Raspberry Pi Zero W to take pictures and tweet them online!
 **This guide also contains information for plug and play functionality and how to run the Pi headlessly**\
@@ -108,15 +110,12 @@ If all went well, you are now connected and should see a new window. Congratulat
 You can mess around with the applications already installed, like the Minecraft lite they have preinstalled! 
 
 Next, we will be programming how to take pictures then tweeting them!
-## Using the Raspberry Pi Camera :camera:
 ## Tweeting with the Raspberry Pi!
 cd Desktop/
 ls (list files)
 nano (name of file) to call
 when using newSendTweet.py, put string inside " "
 To Twitter! [Here](https://twitter.com/CCHSNanolabs)
-## Conclusion
-## Sources
 ###### Helpful places to go!
 - [Adafruit learn](https://learn.adafruit.com/)
 - [Raspberry Pi learn](https://www.raspberrypi.org/learn/)
